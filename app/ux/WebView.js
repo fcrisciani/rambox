@@ -123,18 +123,6 @@ Ext.define('Rambox.ux.WebView',{
 					]
 				}
 			}
-			,bbar: {
-				 xtype: 'statusbar'
-				,defaultText: '<i class="fa fa-check fa-fw" aria-hidden="true"></i> Ready'
-				,busyIconCls : ''
-				,busyText: '<i class="fa fa-circle-o-notch fa-spin fa-fw"></i> Loading...'
-				,items: [
-					,{
-						 xtype: 'tbtext'
-						,itemId: 'url'
-					}
-				]
-			}
 			,listeners: {
 				 afterrender: me.onAfterRender
 			}

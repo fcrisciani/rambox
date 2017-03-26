@@ -74,9 +74,9 @@ Ext.define('Rambox.Application', {
 					}
 				}
 				,{
-					 key: Ext.event.Event.PAGE_DOWN
+					 key: Ext.event.Event.RIGHT
 					,ctrl: true
-					,alt: false
+					,alt: true
 					,shift: false
 					,handler: function(key) {
 						var tabPanel = Ext.cq1('app-main');
@@ -88,9 +88,9 @@ Ext.define('Rambox.Application', {
 					}
 				}
 				,{
-					 key: Ext.event.Event.PAGE_UP
+					 key: Ext.event.Event.LEFT
 					,ctrl: true
-					,alt: false
+					,alt: true
 					,shift: false
 					,handler: function(key) {
 						var tabPanel = Ext.cq1('app-main');

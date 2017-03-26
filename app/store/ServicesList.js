@@ -32,6 +32,33 @@ Ext.define('Rambox.store.ServicesList', {
 			,dont_update_unread_from_title: true
 		},
 		{
+			 id: 'calendar'
+			,logo: 'gcalendar.png'
+			,name: 'Calendar'
+			,description: 'Google Calendar'
+			,url: 'https://google.com/calendar'
+			,type: 'messaging'
+			,dont_update_unread_from_title: true
+		},
+		{
+			 id: 'keep'
+			,logo: 'gkeep.png'
+			,name: 'Keep'
+			,description: 'Google Keep'
+			,url: 'https://keep.google.com/'
+			,type: 'messaging'
+			,dont_update_unread_from_title: true
+		},
+		{
+			 id: 'hackernews'
+			,logo: 'ycombinator.png'
+			,name: 'HackerNews'
+			,description: 'Hacker news Y combinator'
+			,url: 'https://news.ycombinator.com/'
+			,type: 'messaging'
+			,dont_update_unread_from_title: true
+		},
+		{
 			 id: 'slack'
 			,logo: 'slack.png'
 			,name: 'Slack'
