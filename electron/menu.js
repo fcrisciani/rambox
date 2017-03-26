@@ -20,52 +20,11 @@ const helpSubmenu = [
 	{
 		label: `&Visit ${appName} Website`,
 		click() {
-			shell.openExternal('http://rambox.pro');
-		}
-	},
-	{
-		label: `&Facebook`,
-		click() {
-			shell.openExternal('https://www.facebook.com/ramboxapp');
-		}
-	},
-	{
-		label: `&Twitter`,
-		click() {
-			shell.openExternal('https://www.twitter.com/ramboxapp');
-		}
-	},
-	{
-		label: `&GitHub`,
-		click() {
-			shell.openExternal('https://www.github.com/saenzramiro/rambox');
+			shell.openExternal('http://${appName}.com');
 		}
 	},
 	{
 		type: 'separator'
-	},
-	{
-		label: '&Report an Issue...',
-		click() {
-			const body = `
-<!-- Please describe here your issue and steps to reproduce it. -->
-
-
-
-<!-- DON'T REMOVE THE FOLLOWING LINES -->
--
-> ${app.getName()} ${app.getVersion()}
-> Electron ${process.versions.electron}
-> ${process.platform} ${process.arch} ${os.release()}`;
-
-			shell.openExternal(`https://github.com/saenzramiro/rambox/issues/new?body=${encodeURIComponent(body)}`);
-		}
-	},
-	{
-		label: `&Ask for Help`,
-		click() {
-			shell.openExternal('https://gitter.im/saenzramiro/rambox');
-		}
 	},
 	{
 		label: `&Tools`,
@@ -89,15 +48,6 @@ const helpSubmenu = [
 				}
 			}
 		]
-	},
-	{
-		type: 'separator'
-	},
-	{
-		label: `&Donate`,
-		click() {
-			shell.openExternal('https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WU75QWS7LH2CA');
-		}
 	}
 ];
 
@@ -204,14 +154,14 @@ if (process.platform === 'darwin') {
 	tpl.unshift({
 		label: appName,
 		submenu: [
-			{
-				label: `Check for updates...`,
-				click(item, win) {
-					const webContents = win.webContents;
-					const send = webContents.send.bind(win.webContents);
-					send('autoUpdater:check-update');
-				}
-			},
+			// {
+			// 	label: `Check for updates...`,
+			// 	click(item, win) {
+			// 		const webContents = win.webContents;
+			// 		const send = webContents.send.bind(win.webContents);
+			// 		send('autoUpdater:check-update');
+			// 	}
+			// },
 			{
 				label: `About ${appName}`,
 				click() {
@@ -263,14 +213,14 @@ if (process.platform === 'darwin') {
 	helpSubmenu.push({
 		type: 'separator'
 	});
-	helpSubmenu.push({
-		label: `&Check for updates...`,
-		click(item, win) {
-			const webContents = win.webContents;
-			const send = webContents.send.bind(win.webContents);
-			send('autoUpdater:check-update');
-		}
-	});
+	// helpSubmenu.push({
+	// 	label: `&Check for updates...`,
+	// 	click(item, win) {
+	// 		const webContents = win.webContents;
+	// 		const send = webContents.send.bind(win.webContents);
+	// 		send('autoUpdater:check-update');
+	// 	}
+	// });
 	helpSubmenu.push({
 		label: `&About ${appName}`,
 		click() {
