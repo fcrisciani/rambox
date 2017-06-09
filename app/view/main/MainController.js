@@ -412,8 +412,4 @@ Ext.define('Rambox.view.main.MainController', {
 			logoutFn();
 		}
 	}
-
-	,showDonate: function( btn ) {
-		Tooltip.API.show('zxzKWZfcmgRtHXgth');
-	}
 });
